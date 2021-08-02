@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:parallax": "npm run build -- ngx-simple-parallax-js",
+    "publish:parallax": "npm publish ./dist/ngx-simple-parallax-js",
+    "publish:parallax:dev": "npm run publish:parallax -- --tag dev",
+    "publish:parallax:dev:first": "npm run publish:parallax:dev -- --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -19,10 +23,12 @@
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
     "rxjs": "~6.6.0",
+    "simple-parallax-js": "^5.6.2",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.1.4",
     "@angular/cli": "~12.1.4",
     "@angular/compiler-cli": "~12.1.0",
     "@types/jasmine": "~3.8.0",
@@ -33,6 +39,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^12.1.0",
     "typescript": "~4.3.2"
   }
 }

@@ -11,6 +11,13 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "strictNullChecks": false,
+    "paths": {
+      "ngx-simple-parallax-js": [
+        "dist/ngx-simple-parallax-js/ngx-simple-parallax-js",
+        "dist/ngx-simple-parallax-js"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
