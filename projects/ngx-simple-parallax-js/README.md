@@ -16,7 +16,7 @@ This library allows you to use simpleParallax.js in Angular easily.
 
 The ngx-simple-parallax-js can be installed with npm:
 
-`npm install ngx-simple-parallax-js@0.0.3  --save`
+`npm install ngx-simple-parallax-js@0.0.4  --save`
 
 Also install simpleParallax.js too:
 
