@@ -1,17 +1,17 @@
 {
   "name": "ngx-simple-parallax-js",
-  "version": "0.0.1-dev.2",
+  "version": "0.0.1",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
-  "description": "simplePARALLAX.js directive for Angular",
+  "description": "This library allows you to use simpleParallax.js in Angular easily.",
   "homepage": "https://github.com/gesielrosa/",
-  "repository": "https://github.com/gesielrosa/gesielrosa-libs/projects/ngx-simple-parallax-js",
+  "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-simple-parallax-js",
   "keywords": [
     "angular",
     "parallax",
     "simplePARALLAX.js",
     "directive",
     "javascript",
-    "iamge",
+    "image",
     "video",
     "scroll"
   ],

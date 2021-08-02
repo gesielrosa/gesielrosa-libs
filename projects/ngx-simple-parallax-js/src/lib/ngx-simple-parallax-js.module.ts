@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { NgxSimpleParallaxDirective } from './ngx-simple-parallax-js.directive';
+import { NgxSimpleParallaxJsDirective } from './ngx-simple-parallax-js.directive';
 
 @NgModule({
   declarations: [
-    NgxSimpleParallaxDirective
+    NgxSimpleParallaxJsDirective
   ],
   exports: [
-    NgxSimpleParallaxDirective
+    NgxSimpleParallaxJsDirective
   ]
 })
 export class NgxSimpleParallaxJsModule {
