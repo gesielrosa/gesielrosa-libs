@@ -1,4 +1,6 @@
-# NgxSimpleParallax.js
+![ngxSimpleParallax logo](logo.png)
+
+# NgxSimpleParallaxJs
 
 This library allows you to use simpleParallax.js in Angular easily.
 
