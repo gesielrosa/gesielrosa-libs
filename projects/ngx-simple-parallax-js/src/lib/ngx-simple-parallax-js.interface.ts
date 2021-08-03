@@ -4,7 +4,6 @@ export interface IParallaxConfig {
   overflow?: boolean;
   delay?: number;
   transition?: string;
-  breakpoint?: number;
   customContainer?: string | HTMLElement;
   customWrapper?: string;
   maxTransition?: number;
