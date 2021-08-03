@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
   "description": "This library allows you to use simpleParallax.js in Angular easily.",
-  "homepage": "https://github.com/gesielrosa/",
+  "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-simple-parallax-js/",
   "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-simple-parallax-js",
   "keywords": [
     "angular",

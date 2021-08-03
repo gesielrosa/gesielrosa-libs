@@ -68,6 +68,6 @@ With settings:
 
 ### [simpleParallax.js DOCS](https://github.com/geosigno/simpleParallax.js#readme)
 
-<br><hr>
+<hr>
 
 ### [`@gesielrosa`](https://github.com/gesielrosa)
