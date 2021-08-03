@@ -1,4 +1,4 @@
-![https://gesiel.com/gesielrosa-libs/projects/ngx-simple-parallax-js/logo.png](logo.png)
+![NgxSimpleParallaxJs logo](https://gesiel.com/gesielrosa-libs/projects/ngx-simple-parallax-js/logo.png)
 
 [![npm version](https://badge.fury.io/js/ngx-simple-parallax-js.svg)](https://www.npmjs.com/package/ngx-simple-parallax-js)
 
