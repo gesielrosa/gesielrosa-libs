@@ -1,6 +1,6 @@
 {
   "name": "ngx-simple-parallax-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
   "description": "This library allows you to use simpleParallax.js in Angular easily.",
   "homepage": "https://github.com/gesielrosa/",
