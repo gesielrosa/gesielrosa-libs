@@ -26,6 +26,16 @@ COMING SOON
 
 COMING SOON
 
+```
+--modal-bg
+--modal-padding
+--modal-border-radius
+--modal-shadow
+--modal-max-width
+--modal-max-height
+--modal-close-color
+```
+
 <hr>
 
 ### [`@gesielrosa`](https://github.com/gesielrosa)
