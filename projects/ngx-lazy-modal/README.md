@@ -12,29 +12,17 @@ This library allows you to create/show modals in lazy load mode.
 
 The ngx-lazy-modal can be installed with npm:
 
-`npm install ngx-lazy-modal@0.0.1  --save`
+`npm install ngx-lazy-modal  --save`
 
 <hr>
 
-### Import `ModalModule`
-
-Then, import ModalModule into a module of your Angular app.
-
-```
-import { ModalModule } from 'ngx-lazy-modal';
-
-@NgModule({
-  declarations: [],
-  imports: [
-    ModalModule.forRoot()
-  ]
-  exports: []
-})
-export class YourModule {
-}
-```
-
 ### Creating lazy loading modals
+
+COMING SOON
+
+<hr>
+
+### Customizing
 
 COMING SOON
 

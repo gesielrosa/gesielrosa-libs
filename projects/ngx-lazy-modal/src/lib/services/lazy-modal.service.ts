@@ -14,16 +14,18 @@ import {
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import { ModalComponent } from '../components/modal/modal.component';
-import { Modal } from '../models/modal.model';
-import { ModalRef } from '../models/modal-ref.model';
+import { LazyModalComponent } from '../component/lazy-modal.component';
+import { LazyModal } from '../models/lazy-modal.model';
+import { LazyModalRef } from '../models/lazy-modal-ref.model';
 
-@Injectable()
-export class ModalService {
+@Injectable({
+  providedIn: 'root',
+})
+export class LazyModalService {
 
   private _renderer: Renderer2;
 
-  private _containerFactory: ComponentFactory<ModalComponent>;
+  private _containerFactory: ComponentFactory<LazyModalComponent>;
 
   constructor(
     private _componentFactoryResolver: ComponentFactoryResolver,
@@ -37,7 +39,11 @@ export class ModalService {
     this._setupContainerFactory();
   }
 
-  async create<T extends Modal>(compPath: Promise<any>, params?: any): Promise<ModalRef> {
+  async create<T extends LazyModal>(compPath: Promise<any>, params?: any): Promise<LazyModalRef> {
+
+    // fix "ApplicationRef.tick() is called recursively" error
+    await new Promise<void>((resolve) => setTimeout(() => resolve(), 50));
+
     const container = this._setupContainerDiv();
 
     const containerRef = this._appRef.bootstrap(this._containerFactory, container);
@@ -50,7 +56,7 @@ export class ModalService {
       componentRef.instance.onParams(params);
     }
 
-    return new ModalRef(containerRef, componentRef, moduleRef);
+    return new LazyModalRef(containerRef, componentRef, moduleRef);
   }
 
   private _setupContainerDiv(): HTMLElement {
@@ -61,10 +67,10 @@ export class ModalService {
   }
 
   private _setupContainerFactory(): void {
-    this._containerFactory = this._componentFactoryResolver.resolveComponentFactory(ModalComponent);
+    this._containerFactory = this._componentFactoryResolver.resolveComponentFactory(LazyModalComponent);
   }
 
-  private _loadModule<T extends Modal>(path: any): Promise<{ factory: ComponentFactory<T>, moduleRef: NgModuleRef<T> }> {
+  private _loadModule<T extends LazyModal>(path: any): Promise<{ factory: ComponentFactory<T>, moduleRef: NgModuleRef<T> }> {
     return new Promise((resolve, reject) => {
       (path() as Promise<Type<any>>)
         // @ts-ignore
@@ -84,7 +90,7 @@ export class ModalService {
             );
             resolve({factory, moduleRef});
           } catch (err) {
-            console.error('Modal: Check if the modal module contains bootstrap component');
+            console.error('Lazy Modal: Check if the modal module contains a bootstrap component');
             reject(err);
           }
         });

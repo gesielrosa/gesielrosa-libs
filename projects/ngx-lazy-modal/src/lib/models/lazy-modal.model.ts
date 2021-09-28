@@ -1,8 +1,8 @@
-import { ModalRef } from './modal-ref.model';
+import { LazyModalRef } from './lazy-modal-ref.model';
 
-export abstract class Modal {
+export abstract class LazyModal {
 
-  public modalRef: ModalRef;
+  public modalRef: LazyModalRef;
 
   public onParams(params: any): void {
   }
