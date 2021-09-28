@@ -1,0 +1,29 @@
+:host {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--modal-backdrop-bg, rgba(0, 0, 0, 0.25));
+
+  .modal-container {
+    display: block;
+    position: relative;
+    background-color: var(--modal-bg, #FFFFFF);
+    padding: var(--modal-padding, 24px);
+    border-radius: var(--modal-border-radius, 16px);
+    box-shadow: var(--modal-shadow, rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px);
+    max-width: var(--modal-max-width, 90vw);
+    max-height: var(--modal-max-height, 90vh);
+    overflow-y: auto;
+
+    .modal-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--modal-close-color, #000000);
+    }
+
+  }
+
+}

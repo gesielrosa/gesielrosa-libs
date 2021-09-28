@@ -1,0 +1,22 @@
+{
+  "name": "ngx-lazy-modal",
+  "version": "0.0.1",
+  "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
+  "description": "",
+  "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-lazy-modal/",
+  "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-lazy-modal",
+  "keywords": [
+    "angular",
+    "modal",
+    "javascript",
+    "lazy loading"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  },
+  "license": "MIT"
+}

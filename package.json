@@ -9,6 +9,10 @@
     "publish:parallax": "npm publish ./dist/ngx-simple-parallax-js",
     "publish:parallax:dev": "npm run publish:parallax -- --tag dev",
     "publish:parallax:dev:first": "npm run publish:parallax:dev -- --access public",
+    "build:modal": "npm run build -- ngx-lazy-modal",
+    "publish:modal": "npm publish ./dist/ngx-lazy-modal",
+    "publish:modal:dev": "npm run publish:modal -- --tag dev",
+    "publish:modal:dev:first": "npm run publish:modal:dev -- --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
