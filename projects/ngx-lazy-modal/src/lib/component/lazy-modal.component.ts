@@ -14,7 +14,7 @@ import { LazyModal } from '../models/lazy-modal.model';
   selector: 'lazy-modal',
   template: `
     <div class="modal-container">
-      <div aria-label="Close" class="modal-close" (close)="close()">&times;</div>
+      <div aria-label="Close" class="modal-close" (click)="close()">&times;</div>
       <ng-template #modalContainer></ng-template>
     </div>
   `,

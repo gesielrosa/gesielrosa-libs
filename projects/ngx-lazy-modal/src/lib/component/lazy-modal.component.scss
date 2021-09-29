@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   background: var(--modal-backdrop-bg, rgba(0, 0, 0, 0.25));
+  z-index: var(--modal-z-index, 1001);
 
   .modal-container {
     display: block;
@@ -22,14 +23,15 @@
 
     .modal-close {
       position: absolute;
-      top: calc(var(--modal-padding, 24px) - 4px);
-      right: var(--modal-padding, 24px);
-      font-size: 32px;
+      top: calc(var(--modal-close-position, 24px) - 4px);
+      right: var(--modal-close-position, 24px);
+      font-size: var(--modal-close-size, 32px);
       color: var(--modal-close-color, #000000);
       cursor: pointer;
+      z-index: 1;
 
       &:hover {
-        filter: brightness(110%);
+        opacity: 0.8;
       }
 
     }

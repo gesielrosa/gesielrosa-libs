@@ -33,7 +33,10 @@ COMING SOON
 --modal-shadow
 --modal-max-width
 --modal-max-height
+--modal-z-index
 --modal-close-color
+--modal-close-size
+--modal-close-position
 ```
 
 <hr>
