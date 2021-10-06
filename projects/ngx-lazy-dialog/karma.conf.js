@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/ngx-lazy-modal'),
+      dir: require('path').join(__dirname, '../../coverage/ngx-lazy-dialog'),
       subdir: '.',
       reporters: [
         { type: 'html' },

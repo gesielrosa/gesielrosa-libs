@@ -1,15 +1,17 @@
 {
-  "name": "ngx-lazy-modal",
-  "version": "0.0.4",
+  "name": "ngx-lazy-dialog",
+  "version": "0.0.1",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
   "description": "",
-  "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-lazy-modal/",
-  "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-lazy-modal",
+  "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-lazy-dialog/",
+  "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-lazy-dialog",
   "keywords": [
     "angular",
-    "modal",
+    "dialog",
     "javascript",
-    "lazy loading"
+    "typescript",
+    "lazy loading",
+    "lazy load"
   ],
   "peerDependencies": {
     "@angular/common": "^12.1.0",

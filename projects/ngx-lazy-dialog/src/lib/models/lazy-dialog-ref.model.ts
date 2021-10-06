@@ -1,19 +1,19 @@
 import { ComponentRef, NgModuleRef } from '@angular/core';
 import { Subject } from 'rxjs';
 
-import { LazyModalComponent } from '../component/lazy-modal.component';
-import { LazyModal } from './lazy-modal.model';
+import { LazyDialogComponent } from '../component/lazy-dialog.component';
+import { LazyDialog } from './lazy-dialog.model';
 
-export class LazyModalRef {
+export class LazyDialogRef {
 
   private _close$ = new Subject<any>();
 
   constructor(
-    private _modalContainer: ComponentRef<LazyModalComponent>,
-    private _modal: ComponentRef<LazyModal>,
+    private _dialogContainer: ComponentRef<LazyDialogComponent>,
+    private _dialog: ComponentRef<LazyDialog>,
     private _moduleRef: NgModuleRef<any>
   ) {
-    this._modal.instance.modalRef = this;
+    this._dialog.instance.dialogRef = this;
   }
 
   public close(output?: any): void {
@@ -26,8 +26,8 @@ export class LazyModalRef {
   }
 
   private destroy$(): void {
-    this._modal.destroy();
-    this._modalContainer.destroy();
+    this._dialog.destroy();
+    this._dialogContainer.destroy();
     this._moduleRef.destroy();
     this._close$.complete();
   }

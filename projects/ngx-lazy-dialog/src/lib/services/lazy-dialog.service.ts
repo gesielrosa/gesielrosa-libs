@@ -14,18 +14,18 @@ import {
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import { LazyModalComponent } from '../component/lazy-modal.component';
-import { LazyModal } from '../models/lazy-modal.model';
-import { LazyModalRef } from '../models/lazy-modal-ref.model';
+import { LazyDialogComponent } from '../component/lazy-dialog.component';
+import { LazyDialog } from '../models/lazy-dialog.model';
+import { LazyDialogRef } from '../models/lazy-dialog-ref.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LazyModalService {
+export class LazyDialogService {
 
   private _renderer: Renderer2;
 
-  private _containerFactory: ComponentFactory<LazyModalComponent>;
+  private _containerFactory: ComponentFactory<LazyDialogComponent>;
 
   constructor(
     private _componentFactoryResolver: ComponentFactoryResolver,
@@ -39,7 +39,7 @@ export class LazyModalService {
     this._setupContainerFactory();
   }
 
-  async create<T extends LazyModal>(compPath: Promise<any>, params?: any): Promise<LazyModalRef> {
+  async create<T extends LazyDialog>(compPath: Promise<any>, params?: any): Promise<LazyDialogRef> {
 
     // fix "ApplicationRef.tick() is called recursively" error
     await new Promise<void>((resolve) => setTimeout(() => resolve(), 50));
@@ -56,21 +56,21 @@ export class LazyModalService {
       componentRef.instance.onParams(params);
     }
 
-    return new LazyModalRef(containerRef, componentRef, moduleRef);
+    return new LazyDialogRef(containerRef, componentRef, moduleRef);
   }
 
   private _setupContainerDiv(): HTMLElement {
-    const modalContainer = this._renderer.createElement('div');
-    this._renderer.addClass(modalContainer, 'modal-root');
-    this._renderer.appendChild(this._document.body, modalContainer);
-    return modalContainer;
+    const dialogContainer = this._renderer.createElement('div');
+    this._renderer.addClass(dialogContainer, 'dialog-root');
+    this._renderer.appendChild(this._document.body, dialogContainer);
+    return dialogContainer;
   }
 
   private _setupContainerFactory(): void {
-    this._containerFactory = this._componentFactoryResolver.resolveComponentFactory(LazyModalComponent);
+    this._containerFactory = this._componentFactoryResolver.resolveComponentFactory(LazyDialogComponent);
   }
 
-  private _loadModule<T extends LazyModal>(path: any): Promise<{ factory: ComponentFactory<T>, moduleRef: NgModuleRef<T> }> {
+  private _loadModule<T extends LazyDialog>(path: any): Promise<{ factory: ComponentFactory<T>, moduleRef: NgModuleRef<T> }> {
     return new Promise((resolve, reject) => {
       (path() as Promise<Type<any>>)
         // @ts-ignore
@@ -90,7 +90,7 @@ export class LazyModalService {
             );
             resolve({factory, moduleRef});
           } catch (err) {
-            console.error('Lazy Modal: Check if the modal module contains a bootstrap component');
+            console.error('Lazy Dialog: Check if the dialog module contains a bootstrap component');
             reject(err);
           }
         });
