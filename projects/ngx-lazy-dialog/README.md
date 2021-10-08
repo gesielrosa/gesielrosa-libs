@@ -7,6 +7,12 @@ The dialog content is fully customizable, depending on the component you load in
 
 <hr>
 
+| Angular Version | Package Version |
+| ----------- | ----------- |
+| 9+ | 0.0.1^ |
+
+<hr>
+
 ### Installation
 
 The ngx-lazy-dialog can be installed with npm:
@@ -32,7 +38,7 @@ See the list of variables and their default values below:
 | --dialog-bg | #FFFFFF | Container background color |
 | --dialog-padding | 24px | Container padding |
 | --dialog-border-radius | 8px | Container border radius |
-| --dialog-shadow | rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px) | Container box shadow |
+| --dialog-shadow | rgba(9, 30, 66, 0.25) 0 4px 8px -2px, <br>  rgba(9, 30, 66, 0.08) 0 0 0 1px) | Container box shadow |
 | --dialog-max-width | 90vw | Max container width |
 | --dialog-max-height | 90vh | Max container height |
 | --dialog-min-width | 200px | Min container width |
