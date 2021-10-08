@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 50vh;
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      color: #777777;
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+
+      .card {
+        flex: 1;
+        padding-right: 32px;
+
+        img {
+          max-width: 100%;
+        }
+
+      }
+
+      .inputs {
+        flex: 1;
+      }
+
+    }
+
+  }
+
+  .footer {
+    padding-top: 24px;
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+  }
+
+}

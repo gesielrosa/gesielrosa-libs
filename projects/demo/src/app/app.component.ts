@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
   async openAlertDialog(): Promise<void> {
 
-    const component = import('./dialogs/alert/alert.module').then(m => m.AlertModule);
+    const component = import('./dialogs/payment/payment.module').then(m => m.PaymentModule);
     const params = {
       foo: 'bar'
     };

@@ -1,0 +1,29 @@
+* {
+  font-family: sans-serif;
+}
+
+button {
+  min-height: 40px;
+  padding: 0 24px;
+  border-radius: 8px;
+  border: 0;
+  background: #6c8719;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 2px;
+
+  &.transparent {
+    color: #111111;
+    background: transparent;
+  }
+
+}
+
+input {
+  padding: 16px 8px;
+  border-radius: 8px;
+  border: 1px solid #a8a8a8;
+  margin: 2px;
+  width: 92%;
+}
