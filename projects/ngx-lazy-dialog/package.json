@@ -1,8 +1,8 @@
 {
   "name": "ngx-lazy-dialog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
-  "description": "",
+  "description": "Create Angular lazy loading dialogs and fully customizables.",
   "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-lazy-dialog/",
   "repository": "https://github.com/gesielrosa/gesielrosa-libs/tree/main/projects/ngx-lazy-dialog",
   "keywords": [
