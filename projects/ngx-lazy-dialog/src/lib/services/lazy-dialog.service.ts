@@ -39,12 +39,12 @@ export class LazyDialogService {
     this._setupContainerFactory();
   }
 
-  async create<T extends LazyDialog>(compPath: Promise<any>, params?: any): Promise<LazyDialogRef> {
+  async create<T extends LazyDialog>(compPath: Promise<any>, params?: any, customClass?: string): Promise<LazyDialogRef> {
 
     // fix "ApplicationRef.tick() is called recursively" error
     await new Promise<void>((resolve) => setTimeout(() => resolve(), 50));
 
-    const container = this._setupContainerDiv();
+    const container = this._setupContainerDiv(customClass);
 
     const containerRef = this._appRef.bootstrap(this._containerFactory, container);
 
@@ -56,12 +56,20 @@ export class LazyDialogService {
       componentRef.instance.onParams(params);
     }
 
+    this._renderer.addClass(componentRef.location.nativeElement, customClass);
+
+
     return new LazyDialogRef(containerRef, componentRef, moduleRef);
   }
 
-  private _setupContainerDiv(): HTMLElement {
+  private _setupContainerDiv(customClass: string): HTMLElement {
     const dialogContainer = this._renderer.createElement('div');
     this._renderer.addClass(dialogContainer, 'dialog-root');
+
+    if (customClass) {
+      this._renderer.addClass(dialogContainer, customClass);
+    }
+
     this._renderer.appendChild(this._document.body, dialogContainer);
     return dialogContainer;
   }

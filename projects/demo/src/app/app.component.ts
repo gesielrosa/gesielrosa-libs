@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LazyDialogService } from 'ngx-lazy-dialog';
+import { LazyDialogService } from '../../../ngx-lazy-dialog/src/lib/services/lazy-dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       foo: 'bar'
     };
 
-    const dialog = await this._service.create(component, params);
+    const dialog = await this._service.create(component, params, 'teste');
 
     dialog.onClose().then(result => {
       console.log(result);
