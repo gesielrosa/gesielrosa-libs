@@ -51,11 +51,30 @@ See the list of variables and their default values below:
 
 Example:
 
+Global customization:
+
 ``` css
 :root {
   --dialog-bg: #E7EAEF;
   --dialog-close-color: #123661;
 }
+```
+
+Or
+
+Specific customization:
+
+``` css
+.custom-dialog {
+  --dialog-bg: #E7EAEF;
+  --dialog-close-color: #123661;
+}
+```
+
+and add the custom class to the dialog creator:
+
+```
+this.service.create(component, params, 'custom-dialog')
 ```
 
 
