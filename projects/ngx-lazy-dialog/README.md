@@ -9,7 +9,7 @@ The dialog content is fully customizable, depending on the component you load in
 
 | Angular Version | Package Version |
 | ----------- | ----------- |
-| 9+ | 0.0.1^ |
+| 9+ | ^0.0.1 |
 
 <hr>
 
