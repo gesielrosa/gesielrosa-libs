@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       foo: 'bar'
     };
 
-    const dialog = await this._service.create(component, params, 'teste');
+    const dialog = await this._service.create(component, params);
 
     dialog.onClose().then(result => {
       console.log(result);

@@ -1,4 +1,4 @@
-import { LazyDialogRef } from './lazy-dialog-ref.model';
+import {LazyDialogRef} from './lazy-dialog-ref.model';
 
 export abstract class LazyDialog {
 
@@ -7,8 +7,6 @@ export abstract class LazyDialog {
   public onParams(params: any): void {
   }
 
-  public close(output?: any): void {
-    this.dialogRef.close(output);
-  }
+  public close: (output?: any) => void;
 
 }

@@ -7,12 +7,6 @@ The dialog content is fully customizable, depending on the component you load in
 
 <hr>
 
-| Angular Version | Package Version |
-| ----------- | ----------- |
-| 9+ | ^0.0.1 |
-
-<hr>
-
 ### Installation
 
 The ngx-lazy-dialog can be installed with npm:

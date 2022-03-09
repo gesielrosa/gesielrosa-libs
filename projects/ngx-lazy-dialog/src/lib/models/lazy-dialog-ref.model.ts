@@ -1,8 +1,8 @@
-import { ComponentRef, NgModuleRef } from '@angular/core';
-import { Subject } from 'rxjs';
+import {ComponentRef, NgModuleRef} from '@angular/core';
+import {Subject} from 'rxjs';
 
-import { LazyDialogComponent } from '../component/lazy-dialog.component';
-import { LazyDialog } from './lazy-dialog.model';
+import {LazyDialogComponent} from '../component/lazy-dialog.component';
+import {LazyDialog} from './lazy-dialog.model';
 
 export class LazyDialogRef {
 

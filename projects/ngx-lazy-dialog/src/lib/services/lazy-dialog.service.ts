@@ -12,15 +12,13 @@ import {
   RendererFactory2,
   Type
 } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import {DOCUMENT} from '@angular/common';
 
-import { LazyDialogComponent } from '../component/lazy-dialog.component';
-import { LazyDialog } from '../models/lazy-dialog.model';
-import { LazyDialogRef } from '../models/lazy-dialog-ref.model';
+import {LazyDialogComponent} from '../component/lazy-dialog.component';
+import {LazyDialog} from '../models/lazy-dialog.model';
+import {LazyDialogRef} from '../models/lazy-dialog-ref.model';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class LazyDialogService {
 
   private _renderer: Renderer2;
@@ -57,7 +55,6 @@ export class LazyDialogService {
     }
 
     this._renderer.addClass(componentRef.location.nativeElement, customClass);
-
 
     return new LazyDialogRef(containerRef, componentRef, moduleRef);
   }
