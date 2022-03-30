@@ -1,3 +1,2 @@
-theme: jekyll-theme-cayman
-title: Angular Libraries
-description: by @gesielrosa
+remote_theme: just-the-docs/just-the-docs
+search_enabled: true
