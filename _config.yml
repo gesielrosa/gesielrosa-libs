@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Angular Libs
 description: My Angular libs!
-baseurl: "/gesielrosa-libs" # the subpath of your site, e.g. /blog
-url: "https://gesiel.com" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/gesielrosa-libs" # the subpath of your site, e.g. /blog
+# url: "https://gesiel.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: [ "node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
