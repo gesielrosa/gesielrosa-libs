@@ -1,6 +1,6 @@
 {
   "name": "ngx-simple-parallax-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
   "description": "This library allows you to use simpleParallax.js in Angular easily.",
   "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-simple-parallax-js/",
@@ -16,13 +16,12 @@
     "scroll"
   ],
   "peerDependencies": {
-    "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0",
-    "simple-parallax-js": "^5.6.2"
+    "@angular/common": "~13.2.0",
+    "@angular/core": "~13.2.0",
+    "simple-parallax-js": "5.6.2"
   },
   "dependencies": {
-    "@scarf/scarf": "^1.1.1",
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "license": "MIT"
 }
