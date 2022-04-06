@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { PaymentComponent } from './payment.component';
+import {PaymentComponent} from './payment.component';
+
+import {ModuleWithLazyDialog} from '../../../../../ngx-lazy-dialog/src/lib/models/module-with-lazy-dialog.model';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,9 @@ import { PaymentComponent } from './payment.component';
   imports: [
     CommonModule
   ],
-  bootstrap: [
-    PaymentComponent
-  ]
 })
 export class PaymentModule {
+  static getComponent(): ModuleWithLazyDialog<PaymentComponent> {
+    return {component: PaymentComponent};
+  }
 }

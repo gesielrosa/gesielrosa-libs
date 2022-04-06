@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { LazyDialogService } from '../../../ngx-lazy-dialog/src/lib/services/lazy-dialog.service';
+import {LazyDialogService} from '../../../ngx-lazy-dialog/src/lib/services/lazy-dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,6 @@ import { LazyDialogService } from '../../../ngx-lazy-dialog/src/lib/services/laz
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
   constructor(
     private _service: LazyDialogService
   ) {
@@ -19,18 +18,16 @@ export class AppComponent implements OnInit {
   }
 
   async openAlertDialog(): Promise<void> {
-
-    const component = import('./dialogs/payment/payment.module').then(m => m.PaymentModule);
     const params = {
       foo: 'bar'
     };
 
-    const dialog = await this._service.create(component, params);
+    const module = await import('./dialogs/payment/payment.module');
+    const dialog = await this._service.create(module.PaymentModule.getComponent().component, params);
 
     dialog.onClose().then(result => {
       console.log(result);
     });
 
   }
-
 }
