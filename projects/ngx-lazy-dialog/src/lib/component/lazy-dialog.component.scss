@@ -6,7 +6,7 @@
   justify-content: center;
   background: var(--dialog-backdrop-bg, rgba(0, 0, 0, 0.25));
   z-index: var(--dialog-z-index, 1001);
-  animation: fadeIn 160ms;
+  animation: fadeIn var(--dialog-animation-duration, 160ms);
 
   .dialog-container {
     display: block;
@@ -56,5 +56,4 @@
       opacity: 0;
     }
   }
-
 }

@@ -1,12 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  ComponentFactory,
-  ComponentRef,
-  ElementRef,
-  ViewChild,
-  ViewContainerRef
-} from '@angular/core';
+import {Component, ComponentRef, ElementRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {filter} from 'rxjs/operators';
 
@@ -23,23 +15,21 @@ import {LazyDialog} from '../models/lazy-dialog.model';
   styleUrls: ['./lazy-dialog.component.scss']
 })
 export class LazyDialogComponent {
+  @ViewChild('dialogContainer', {read: ViewContainerRef}) private _dialogContainer: ViewContainerRef;
 
-  @ViewChild('dialogContainer', {read: ViewContainerRef}) private dialogContainer: ViewContainerRef;
-
-  private dialogComponentRef: LazyDialog;
+  private _dialogComponentRef: LazyDialog;
 
   constructor(
-    private _cdr: ChangeDetectorRef,
     private _el: ElementRef<HTMLElement>
   ) {
   }
 
-  public create<T extends LazyDialog>(factory: ComponentFactory<T>): ComponentRef<T> {
-    this.dialogContainer.clear();
-    const component = this.dialogContainer.createComponent(factory, 0);
-    this.dialogComponentRef = component.instance;
-    this.dialogComponentRef.close = this.close.bind(this);
-    return component;
+  public create<T extends LazyDialog>(component: Type<T>): ComponentRef<T> {
+    this._dialogContainer.clear();
+    const componentRef = this._dialogContainer.createComponent<T>(component)
+    this._dialogComponentRef = componentRef.instance;
+    this._dialogComponentRef.close = this.close.bind(this);
+    return componentRef;
   }
 
   public close(output?: any): void {
@@ -48,11 +38,10 @@ export class LazyDialogComponent {
         filter(event => event.animationName === 'fadeOut')
       )
       .subscribe(() => {
-        this.dialogComponentRef.dialogRef?.close(output);
+        this._dialogComponentRef.dialogRef?.close(output);
         subs.unsubscribe();
       })
 
-    this._el.nativeElement.style.animation = 'fadeOut 160ms';
+    this._el.nativeElement.style.animation = 'fadeOut var(--dialog-animation-duration, 160ms)';
   }
-
 }

@@ -2,8 +2,8 @@
 
 # Ngx Lazy Dialog
 
-This library allows you to create dialogs with lazy loading.
-The dialog content is fully customizable, depending on the component you load into it.
+This library allows you to create dialogs with lazy loading. The dialog content is fully customizable, depending on the
+component you load into it.
 
 <hr>
 
@@ -11,7 +11,7 @@ The dialog content is fully customizable, depending on the component you load in
 
 The ngx-lazy-dialog can be installed with npm:
 
-`npm install ngx-lazy-dialog  --save`
+`npm install ngx-lazy-dialog --save`
 
 <hr>
 
@@ -23,25 +23,25 @@ The ngx-lazy-dialog can be installed with npm:
 
 ### Customizing the container and backdrop
 
-You can customize the dialog container and backdrop using CSS variables.
-See the list of variables and their default values below:
+You can customize the dialog container and backdrop using CSS variables. See the list of variables and their default
+values below:
 
-| Var | Default | Description |
-| ----------- | ----------- | ----------- |
-| --dialog-backdrop-bg | rgba(0, 0, 0, 0.25) | Backdrop color |
-| --dialog-bg | #FFFFFF | Container background color |
-| --dialog-padding | 24px | Container padding |
-| --dialog-border-radius | 8px | Container border radius |
-| --dialog-shadow | rgba(9, 30, 66, 0.25) 0 4px 8px -2px, <br>  rgba(9, 30, 66, 0.08) 0 0 0 1px) | Container box shadow |
-| --dialog-max-width | 90vw | Max container width |
-| --dialog-max-height | 90vh | Max container height |
-| --dialog-min-width | 200px | Min container width |
-| --dialog-min-height | 100px | Min container height |
-| --dialog-z-index | 1001 | Z-index |
-| --dialog-close-color | #000000 | Close icon color |
-| --dialog-close-size | 24px | Close icon size |
-| --dialog-close-position | 24px | Close icon position |
-
+| Var | Default                                                                      | Description                |
+| ----------- |------------------------------------------------------------------------------|----------------------------|
+| --dialog-backdrop-bg | rgba(0, 0, 0, 0.25)                                                          | Backdrop color             |
+| --dialog-bg | #FFFFFF                                                                      | Container background color |
+| --dialog-padding | 24px                                                                         | Container padding          |
+| --dialog-border-radius | 8px                                                                          | Container border radius    |
+| --dialog-shadow | rgba(9, 30, 66, 0.25) 0 4px 8px -2px, <br>  rgba(9, 30, 66, 0.08) 0 0 0 1px) | Container box shadow       |
+| --dialog-max-width | 90vw                                                                         | Max container width        |
+| --dialog-max-height | 90vh                                                                         | Max container height       |
+| --dialog-min-width | 200px                                                                        | Min container width        |
+| --dialog-min-height | 100px                                                                        | Min container height       |
+| --dialog-z-index | 1001                                                                         | Z-index                    |
+| --dialog-close-color | #000000                                                                      | Close icon color           |
+| --dialog-close-size | 24px                                                                         | Close icon size            |
+| --dialog-close-position | 24px                                                                         | Close icon position        |
+| --dialog-animation-duration | 160ms                                                                        | Animation duration         |
 
 Example:
 
@@ -70,7 +70,6 @@ and add the custom class to the dialog creator:
 ```
 this.service.create(component, params, 'custom-dialog')
 ```
-
 
 <hr>
 
