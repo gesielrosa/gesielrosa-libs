@@ -14,7 +14,7 @@ import {ModuleWithLazyDialog} from '../../../../../ngx-lazy-dialog/src/lib/model
   ],
 })
 export class PaymentModule {
-  static getComponent(): ModuleWithLazyDialog<PaymentComponent> {
+  static getDialog(): ModuleWithLazyDialog<PaymentComponent> {
     return {component: PaymentComponent};
   }
 }

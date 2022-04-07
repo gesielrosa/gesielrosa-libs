@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AlertComponent } from './alert.component';
+import {AlertComponent} from './alert.component';
+
+import {ModuleWithLazyDialog} from '../../../../../ngx-lazy-dialog/src/lib/models/module-with-lazy-dialog.model';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,9 @@ import { AlertComponent } from './alert.component';
   imports: [
     CommonModule
   ],
-  bootstrap: [
-    AlertComponent
-  ]
 })
 export class AlertModule {
+  static getDialog(): ModuleWithLazyDialog<AlertComponent> {
+    return {component: AlertComponent};
+  }
 }

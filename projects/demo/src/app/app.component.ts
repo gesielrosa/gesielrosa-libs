@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     };
 
     const module = await import('./dialogs/payment/payment.module');
-    const dialog = await this._service.create(module.PaymentModule.getComponent().component, params);
+    const dialog = await this._service.create(module.PaymentModule.getDialog().component, params);
 
     dialog.onClose().then(result => {
       console.log(result);
