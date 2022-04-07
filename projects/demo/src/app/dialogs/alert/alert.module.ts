@@ -13,8 +13,8 @@ import {ModuleWithLazyDialog} from '../../../../../ngx-lazy-dialog/src/lib/model
     CommonModule
   ],
 })
-export class AlertModule {
-  static getDialog(): ModuleWithLazyDialog<AlertComponent> {
-    return {component: AlertComponent};
-  }
+export class AlertModule extends ModuleWithLazyDialog<AlertComponent> {
+  getDialog() {
+    return AlertComponent;
+  };
 }

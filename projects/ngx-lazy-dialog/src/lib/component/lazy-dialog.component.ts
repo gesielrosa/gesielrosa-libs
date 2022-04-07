@@ -1,4 +1,13 @@
-import {Component, ComponentRef, ElementRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  Component,
+  ComponentRef,
+  ElementRef,
+  Injector,
+  NgModuleRef,
+  Type,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {filter} from 'rxjs/operators';
 
@@ -20,13 +29,14 @@ export class LazyDialogComponent {
   private _dialogComponentRef: LazyDialog;
 
   constructor(
+    private _injector: Injector,
     private _el: ElementRef<HTMLElement>
   ) {
   }
 
-  public create<T extends LazyDialog>(component: Type<T>): ComponentRef<T> {
+  public create<T extends LazyDialog>(component: Type<T>, ngModuleRef: NgModuleRef<any>): ComponentRef<T> {
     this._dialogContainer.clear();
-    const componentRef = this._dialogContainer.createComponent<T>(component)
+    const componentRef = this._dialogContainer.createComponent<T>(component, {injector: this._injector, ngModuleRef})
     this._dialogComponentRef = componentRef.instance;
     this._dialogComponentRef.close = this.close.bind(this);
     return componentRef;

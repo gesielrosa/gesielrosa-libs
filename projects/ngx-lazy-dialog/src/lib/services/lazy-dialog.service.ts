@@ -1,8 +1,18 @@
-import {ApplicationRef, Inject, Injectable, Injector, Renderer2, RendererFactory2, Type} from '@angular/core';
+import {
+  ApplicationRef,
+  createNgModuleRef,
+  Inject,
+  Injectable,
+  Injector,
+  Renderer2,
+  RendererFactory2,
+  Type
+} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 
 import {LazyDialog} from '../models/lazy-dialog.model';
 import {LazyDialogRef} from '../models/lazy-dialog-ref.model';
+import {ModuleWithLazyDialog} from '../models/module-with-lazy-dialog.model';
 
 @Injectable()
 export class LazyDialogService {
@@ -17,7 +27,7 @@ export class LazyDialogService {
     this._renderer = this._rendererFactory.createRenderer(null, null);
   }
 
-  async create<T extends LazyDialog>(component: Type<T>, params?: any, customClass?: string): Promise<LazyDialogRef> {
+  async create<T extends LazyDialog>(module: Type<ModuleWithLazyDialog<T>>, params?: any, customClass?: string): Promise<LazyDialogRef> {
 
     // fix "ApplicationRef.tick() is called recursively" error
     await new Promise<void>((resolve) => setTimeout(() => resolve(), 50));
@@ -28,7 +38,15 @@ export class LazyDialogService {
 
     const containerRef = this._appRef.bootstrap(dialogComponentContainer.LazyDialogComponent, container);
 
-    const componentRef = containerRef.instance.create<T>(component);
+    const moduleRef = createNgModuleRef(module, this._injector);
+
+    const component = moduleRef.instance?.getDialog();
+
+    if (!component) {
+      throw 'Dialog module not extends or implements ModuleWithLazyDialog class';
+    }
+
+    const componentRef = containerRef.instance.create<T>(component, moduleRef);
 
     if (params) {
       componentRef.instance.onParams(params);
@@ -36,7 +54,7 @@ export class LazyDialogService {
 
     this._renderer.addClass(componentRef.location.nativeElement, customClass);
 
-    return new LazyDialogRef(containerRef, componentRef);
+    return new LazyDialogRef(containerRef, componentRef, moduleRef);
   }
 
   private _setupContainerDiv(customClass: string): HTMLElement {

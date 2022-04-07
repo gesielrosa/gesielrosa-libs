@@ -2,8 +2,11 @@
 
 # Ngx Lazy Dialog
 
-This library allows you to create dialogs with lazy loading. The dialog content is fully customizable, depending on the
-component you load into it.
+This library allows you to create lazy loading dialogs without the need for root app dependency injections.
+
+Each dialog is completely independent of the rest of the application (module based).
+
+The dialog content is fully customizable!
 
 <hr>
 
@@ -15,7 +18,7 @@ The ngx-lazy-dialog can be installed with npm:
 
 <hr>
 
-### Creating lazy loading dialogs
+### How to use
 
 [Read the article](https://medium.com/@gesielr/ngx-lazy-dialog-lazy-loading-dialogs-in-angular-498edf937e3e)
 
