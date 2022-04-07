@@ -10,6 +10,10 @@ The dialog content is fully customizable!
 
 <hr>
 
+**Angular Ivy versions only!!**
+
+<hr>
+
 ### Installation
 
 The ngx-lazy-dialog can be installed with npm:
