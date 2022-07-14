@@ -16,7 +16,7 @@ This library allows you to use simpleParallax.js in Angular easily.
 
 The ngx-simple-parallax-js can be installed with npm:
 
-`npm install ngx-simple-parallax-js@0.0.7 simple-parallax-js@^5.6.2`
+`npm install ngx-simple-parallax-js@0.0.9 simple-parallax-js@^5.6.2`
 
 <hr>
 
@@ -60,9 +60,7 @@ With settings:
  <img parallax [parallaxConfig]="parallaxConfig" class="thumbnail" src="image.jpg" alt="image">
 ```
 
-### Complete documentation for `simpleParallax.js`:
-
-### [simpleParallax.js DOCS](https://github.com/geosigno/simpleParallax.js#readme)
+Complete documentation for `simpleParallax.js`: [Official docs](https://github.com/geosigno/simpleParallax.js#readme)
 
 <hr>
 
