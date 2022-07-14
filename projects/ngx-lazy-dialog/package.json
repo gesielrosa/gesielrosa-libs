@@ -1,6 +1,6 @@
 {
   "name": "ngx-lazy-dialog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Gesiel Rosa <me@gesiel.com> (https://github.com/gesielrosa/)",
   "description": "Create Angular lazy loading dialogs and fully customizables.",
   "homepage": "https://gesiel.com/gesielrosa-libs/projects/ngx-lazy-dialog/",
@@ -15,8 +15,8 @@
     "modal"
   ],
   "peerDependencies": {
-    "@angular/common": "~13.2.0",
-    "@angular/core": "~13.2.0"
+    "@angular/common": ">=13.0.0",
+    "@angular/core": ">=13.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
