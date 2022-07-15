@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/ngx-lazy-dialog.svg)](https://www.npmjs.com/package/ngx-lazy-dialog)
+## [Repository moved there](https://github.com/gesielrosa/ngx-lazy-dialog)
 
 # Ngx Lazy Dialog
 
